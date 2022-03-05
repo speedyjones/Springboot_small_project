@@ -1,5 +1,6 @@
-package com.nextgencollege.nextgencollege.Controller;
+package org.nextgencollege.nextgencollege.Controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @ControllerAdvice
 public class ErrorHandlerController implements ErrorController {
 
@@ -34,8 +36,8 @@ public class ErrorHandlerController implements ErrorController {
     public ResponseEntity<?> handleDuplicate(SQLIntegrityConstraintViolationException duplicate) {
         Map<String, Object> duplicateError = new HashMap<>();
         duplicateError.put("Error", "Please Check The Book ID  !!!!!");
-        duplicateError.put("ErrorMsg", duplicate.getLocalizedMessage());
-        return new ResponseEntity<>(duplicate, HttpStatus.BAD_GATEWAY);
+        log.error("ErrorMsg : "+ duplicate.getLocalizedMessage());
+        return new ResponseEntity<>(duplicateError, HttpStatus.BAD_GATEWAY);
     }
 
 }

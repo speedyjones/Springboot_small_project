@@ -1,10 +1,10 @@
-package com.nextgencollege.nextgencollege.Controller;
+package org.nextgencollege.nextgencollege.Controller;
 
-import com.nextgencollege.nextgencollege.DTOs.BooksDTO;
-import com.nextgencollege.nextgencollege.DTOs.BooksTrackerDTO;
-import com.nextgencollege.nextgencollege.Entity.Books;
-import com.nextgencollege.nextgencollege.Impl.BooksImpl;
-import com.nextgencollege.nextgencollege.Impl.BooksTrackerImpl;
+import org.nextgencollege.nextgencollege.DTOs.BooksDTO;
+import org.nextgencollege.nextgencollege.DTOs.BooksTrackerDTO;
+import org.nextgencollege.nextgencollege.Entity.Books;
+import org.nextgencollege.nextgencollege.Impl.BooksImpl;
+import org.nextgencollege.nextgencollege.Impl.BooksTrackerImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

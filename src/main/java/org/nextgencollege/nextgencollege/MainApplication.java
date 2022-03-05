@@ -1,4 +1,4 @@
-package com.nextgencollege.nextgencollege;
+package org.nextgencollege.nextgencollege;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;

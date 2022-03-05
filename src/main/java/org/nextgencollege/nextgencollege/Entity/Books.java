@@ -1,10 +1,9 @@
-package com.nextgencollege.nextgencollege.Entity;
+package org.nextgencollege.nextgencollege.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -18,18 +17,22 @@ import java.util.Date;
 @Data
 @Builder
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "booksTracker")
-public class BooksTracker implements Serializable {
+@Table(name = "books")
+public class Books implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String bookId;
     private String name;
+
+    @Column(unique = true)
+    private String bookId;
+    private String author;
+    private String category;
+    private boolean isAvailable;
+    private String holdersName;
     private String uniqueId;
-    @CreatedDate
-    private Date issuedAt;
     @LastModifiedDate
-    private Date submittedAt;
-    private String comments;
+    private Date timeStamp;
+
 }

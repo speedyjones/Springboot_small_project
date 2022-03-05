@@ -1,11 +1,11 @@
-package com.nextgencollege.nextgencollege.Impl;
+package org.nextgencollege.nextgencollege.Impl;
 
-import com.nextgencollege.nextgencollege.DTOs.BooksTrackerDTO;
-import com.nextgencollege.nextgencollege.Entity.Books;
-import com.nextgencollege.nextgencollege.Entity.BooksTracker;
-import com.nextgencollege.nextgencollege.Repository.BooksRepository;
-import com.nextgencollege.nextgencollege.Repository.BooksTackerRepository;
-import com.nextgencollege.nextgencollege.Service.BooksTrackerService;
+import org.nextgencollege.nextgencollege.DTOs.BooksTrackerDTO;
+import org.nextgencollege.nextgencollege.Entity.Books;
+import org.nextgencollege.nextgencollege.Entity.BooksTracker;
+import org.nextgencollege.nextgencollege.Repository.BooksRepository;
+import org.nextgencollege.nextgencollege.Repository.BooksTackerRepository;
+import org.nextgencollege.nextgencollege.Service.BooksTrackerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

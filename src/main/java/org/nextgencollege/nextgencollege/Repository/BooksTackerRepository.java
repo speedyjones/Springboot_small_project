@@ -1,6 +1,6 @@
-package com.nextgencollege.nextgencollege.Repository;
+package org.nextgencollege.nextgencollege.Repository;
 
-import com.nextgencollege.nextgencollege.Entity.BooksTracker;
+import org.nextgencollege.nextgencollege.Entity.BooksTracker;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BooksTackerRepository extends JpaRepository<BooksTracker,Long> {
